@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 20:58:33 by mmendes-          #+#    #+#             */
-/*   Updated: 2022/09/24 16:23:41 by mmendes-         ###   ########.fr       */
+/*   Created: 2022/09/26 20:44:57 by mmendes-          #+#    #+#             */
+/*   Updated: 2022/09/26 20:46:10 by mmendes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-int	main( int argc, char **argv)
-{
-	char	*str;
+typedef struct t_point{
+	int	x;
+	int	y;
+}t_point;
 
-	str = argv[0];
-	while (*str != '\0' && argc)
-	{
-		write(1, str, 1);
-		str++;
-	}
-	write(1, "\n", 1);
-	return (0);
-}
+#endif

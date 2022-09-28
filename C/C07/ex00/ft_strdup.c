@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 20:58:33 by mmendes-          #+#    #+#             */
-/*   Updated: 2022/09/24 16:23:41 by mmendes-         ###   ########.fr       */
+/*   Created: 2022/09/20 20:12:36 by mmendes-          #+#    #+#             */
+/*   Updated: 2022/09/25 19:19:04 by mmendes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	main( int argc, char **argv)
+char	*ft_strdup(char *src)
 {
-	char	*str;
+	int		len;
+	char	*p;
 
-	str = argv[0];
-	while (*str != '\0' && argc)
+	len = 0;
+	while (src[len])
+		len++;
+	p = malloc(len * sizeof(char));
+	len = 0;
+	while (src[len])
 	{
-		write(1, str, 1);
-		str++;
+		p[len] = src[len];
+		len++;
 	}
-	write(1, "\n", 1);
-	return (0);
+	p[len] = '\0';
+	return (p);
 }

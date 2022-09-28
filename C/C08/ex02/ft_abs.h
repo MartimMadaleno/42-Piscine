@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmendes- <mmendes-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/18 20:58:33 by mmendes-          #+#    #+#             */
-/*   Updated: 2022/09/24 16:23:41 by mmendes-         ###   ########.fr       */
+/*   Created: 2022/09/26 20:21:33 by mmendes-          #+#    #+#             */
+/*   Updated: 2022/09/26 20:22:01 by mmendes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-int	main( int argc, char **argv)
-{
-	char	*str;
+# define ABS(x) (x < 0 ? -x : x)
 
-	str = argv[0];
-	while (*str != '\0' && argc)
-	{
-		write(1, str, 1);
-		str++;
-	}
-	write(1, "\n", 1);
-	return (0);
-}
+#endif
