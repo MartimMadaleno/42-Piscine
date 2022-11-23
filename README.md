@@ -1,6 +1,6 @@
 # 42 Piscine
 
-Here is all my work doring 42 piscine
+Here is all my work during 42 piscine
 
 ## Installation
 
